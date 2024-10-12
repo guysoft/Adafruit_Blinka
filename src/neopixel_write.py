@@ -19,7 +19,7 @@ if detector.board.any_raspberry_pi:
     from adafruit_blinka.microcontroller.bcm283x import neopixel as _neopixel
 elif detector.board.pico_u2if:
     from adafruit_blinka.microcontroller.rp2040_u2if import neopixel as _neopixel
-elif detector.board.OS_AGNOSTIC_BOARD:
+elif detector.board.OS_AGNOSTIC_BOARD or detector.board.any_libre_computer_board:
     from adafruit_blinka.microcontroller.generic_agnostic_board import (
         neopixel as _neopixel,
     )
